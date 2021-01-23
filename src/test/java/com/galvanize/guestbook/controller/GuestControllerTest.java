@@ -63,7 +63,7 @@ class GuestControllerTest {
         GuestEntry guestEntry = new GuestEntry("Rick Sanchez", "Rick was here.");
 
         mockMvc.perform(
-                post("/guØestbook")
+                post("/guestbook")
                         .content(objectMapper.writeValueAsString(guestEntry))
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated());
